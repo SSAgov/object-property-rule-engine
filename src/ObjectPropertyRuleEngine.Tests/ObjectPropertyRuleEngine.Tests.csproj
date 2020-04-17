@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>SSAx.ObjectPropertyRuleEngine.Tests</RootNamespace>
+<Authors>open.source@ssa.gov</Authors>
+    <Company>Social Security Administration</Company>
+    <IsPackable>false</IsPackable>
+    <AssemblyName>SSAx.ObjectPropertyRuleEngine.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectPropertyRuleEngine\ObjectPropertyRuleEngine.csproj" />
+  </ItemGroup>
+
+</Project>

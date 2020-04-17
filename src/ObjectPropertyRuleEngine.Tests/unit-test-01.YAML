@@ -1,0 +1,65 @@
+RuleSetGuid: a385c378-3e7b-4890-a9f1-731a745201a0
+Name: Main naming standards ruleset
+Description: This is the default ruleset that is used for naming standards checks
+Rules:
+- ID: 1
+  Description: All columns must end with a class word
+  AppliesToTypeName: System.Data.DataColumn
+  Antecedent:
+    RuleExpressions: []
+    RuleExpressionGroups: []
+  Consequent:
+    RuleExpressions:
+    - PropertyName: LogicalName
+      ComparisonCondition: EndsWithAny
+      ExpressionValue: File;Line 4;Line 3;Line 2;Line 1;Line;Code;Address;Year;Timestamp;Time;Text;Switch;Rate;Percent;Number;Name;Indicator;Identifier;Description;Date;Count;Amount
+    RuleExpressionGroups: []
+- ID: 2
+  Description: Expect columns that end in Timestamp or Time Stamp to be a datetime or related datatype
+  AppliesToTypeName: System.Data.DataColumn
+  Antecedent:
+    LogicOperator: Or
+    RuleExpressions:
+    - PropertyName: LogicalName
+      ComparisonCondition: EndsWith
+      ExpressionValue: Timestamp
+    - PropertyName: LogicalName
+      ComparisonCondition: EndsWith
+      ExpressionValue: Time Stamp
+    - PropertyName: Caption
+      ComparisonCondition: EndsWith
+      ExpressionValue: Time Stamp
+    RuleExpressionGroups: []
+  Consequent:
+    RuleExpressions:
+    - PropertyName: Datatype
+      ComparisonCondition: EqualTo
+      ExpressionValue: Timestamp
+    RuleExpressionGroups: []
+- ID: 3
+  Description: Email addresses (xyz@ssa.gov) should end with email address.
+  AppliesToTypeName: System.Data.DataColumn
+  Antecedent:
+    RuleExpressions: []
+    RuleExpressionGroups:
+    - LogicOperator: Or
+      RuleExpressions:
+      - PropertyName: LogicalName
+        ComparisonCondition: EndsWith
+        ExpressionValue: email address
+      - PropertyName: LogicalName
+        ComparisonCondition: EndsWith
+        ExpressionValue: e-mail address
+      - PropertyName: LogicalName
+        ComparisonCondition: EndsWith
+        ExpressionValue: e mail address
+      - PropertyName: LogicalName
+        ComparisonCondition: EndsWith
+        ExpressionValue: email
+      - PropertyName: LogicalName
+        ComparisonCondition: EndsWith
+        ExpressionValue: e-mail
+      RuleExpressionGroups: []
+  Consequent:
+    RuleExpressions: []
+    RuleExpressionGroups: []

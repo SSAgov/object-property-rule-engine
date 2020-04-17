@@ -5,9 +5,11 @@ This .NET Standard 2.0 library is a rules engine that allows for evaluating prop
 
 It was originally designed to run rules checks against various objects in the System.Data namespace. However, it can evaluate properties of any object. 
 
-## Contributing
+## NuGet Package
 
-Please reference our [CONTRIBUTING.md](CONTRIBUTING.md) guide to learn about our development process, how to propose bugfixes and improvements.
+This library is available as a compiled package is on Nuget.org
+
+<https://www.nuget.org/packages/ObjectPropertyRuleEngine/>
 
 ## Feedback
 

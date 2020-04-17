@@ -11,15 +11,23 @@
         <Product>Object Property Rule Engine and Compliance Checker</Product>
         <PackageId>ObjectPropertyRuleEngine</PackageId>
         <RepositoryUrl>https://github.com/SSAgov/object-property-rule-engine</RepositoryUrl>
-        <PackageTags>object property, rule engine</PackageTags>
-        <Version>1.0.1</Version>
-        <PackageReleaseNotes>added IsAny</PackageReleaseNotes>
+        <PackageTags>object property, rule engine, ai</PackageTags>
+        <Version>1.0.2</Version>
+        <PackageReleaseNotes>updated references; added license</PackageReleaseNotes>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="PrimitiveExtensions" Version="1.0.9" />
     <PackageReference Include="YamlDotNet" Version="8.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

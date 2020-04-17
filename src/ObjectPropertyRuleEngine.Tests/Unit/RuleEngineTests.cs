@@ -23,7 +23,7 @@ namespace ObjectPropertyRuleEngine.Tests.Unit
         public void LoadRulesetFromYamlFileUrl()
         {
             RuleEngine e = new RuleEngine();
-            string urlToYaml = "src/ObjectPropertyRuleEngine.Tests/unit-test-01.YAML";
+            string urlToYaml = "https://github.com/SSAgov/object-property-rule-engine/raw/master/src/ObjectPropertyRuleEngine.Tests/unit-test-01.YAML";
             e.LoadRulesetFromYamlFileUrl(urlToYaml);
             Assert.Equal("a385c378-3e7b-4890-a9f1-731a745201a0", e.RuleSet.RuleSetGuid);
             Assert.Equal(3, e.RuleSet.Rules.Count);
@@ -33,7 +33,7 @@ namespace ObjectPropertyRuleEngine.Tests.Unit
         public void LoadRulesetFromYamlFileUrl_CheckForDuplicateRuleID_1_duplicate()
         {
             RuleEngine e = new RuleEngine();
-            string urlToYaml = "src/ObjectPropertyRuleEngine.Tests/unit-test-02-duplicate-rule-id.YAML";
+            string urlToYaml = "https://github.com/SSAgov/object-property-rule-engine/raw/master/src/ObjectPropertyRuleEngine.Tests/unit-test-02-duplicate-rule-id.YAML";
             e.LoadRulesetFromYamlFileUrl(urlToYaml);
             Assert.Equal("8e6273b7-c719-4b08-b53f-6a7ac741c030", e.RuleSet.RuleSetGuid);
             var repeatedIds = e.RuleSet.GetRepeatedRuleIds();
@@ -45,7 +45,7 @@ namespace ObjectPropertyRuleEngine.Tests.Unit
         public void LoadYamlFromUrl_CheckForDuplicateRuleID_Multiple_Duplicates()
         {
             RuleEngine e = new RuleEngine();
-            string urlToYaml = "src/ObjectPropertyRuleEngine.Tests/unit-test-03-duplicate-rule-id.YAML?";
+            string urlToYaml = "https://github.com/SSAgov/object-property-rule-engine/raw/master/src/ObjectPropertyRuleEngine.Tests/unit-test-03-duplicate-rule-id.YAML?";
             e.LoadRulesetFromYamlFileUrl(urlToYaml);
             Assert.Equal("eff64cca-3c37-438e-9a12-edf7f975159c", e.RuleSet.RuleSetGuid);
             var dupes = e.RuleSet.GetRepeatedRuleIds();

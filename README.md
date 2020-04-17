@@ -110,7 +110,7 @@ Represents 1 or many `RuleExpressions` and `RuleExpressionGroups` grouped togeth
  ((((eq1 OR eq2) OR (eq3 AND eq4 AND eq5)) AND eq6 AND eq7 AND (eq8 OR eq9)) OR eq10)
 ```
 
-[View the example on this unit test: `ComplexNestedRuleExpressionGroupTest()`](src\ObjectPropertyRuleEngine.Tests\Unit\RuleExpressionGroupTests.cs)
+[View the example on this unit test: `ComplexNestedRuleExpressionGroupTest()`](src/ObjectPropertyRuleEngine.Tests/Unit/RuleExpressionGroupTests.cs)
 
 #### RuleExpression
 
